@@ -31,7 +31,7 @@ public class ValidatorImpl implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        //将hebernate validator用过工厂的初始化方式使其实例化
+        //将hibernate validator用工厂的初始化方式使其实例化
         this.validator = Validation.buildDefaultValidatorFactory().getValidator();
     }
 }
