@@ -29,6 +29,7 @@ public class BaseController {
         }else{
             responseData.put("errCode", EmBusinessError.UNKNOWN_ERROR.getErrCode());
             responseData.put("errMsg", EmBusinessError.UNKNOWN_ERROR.getErrMsg());
+            ex.printStackTrace();
         }
         return CommonReturnType.create(responseData, "fail");
     }
